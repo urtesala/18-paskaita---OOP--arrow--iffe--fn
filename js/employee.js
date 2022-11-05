@@ -20,6 +20,12 @@ class Employee {
     console.log(`${this.firstName} ${this.lastName} salary is ${pay}`);
     return pay;
   }
+
+  payForWork() {
+    const pay = this.hoursWorked * this.hourlyPay;
+    console.log(`${this.firstName} ${this.lastName} salary is ${pay}`);
+    return pay - pay;
+  }
 }
 
 const em1 = new Employee("James", "Bond", 10);
@@ -34,3 +40,6 @@ console.log(`Bruno Mars in total worked ${em2.hoursWorked} hours`);
 
 console.log("em1.calcPay() ===", em1.calcPay());
 console.log("em1.calcPay() ===", em2.calcPay());
+
+console.log("em1.payForWork() ===", em1.payForWork());
+console.log("em2.payForWork() ===", em2.payForWork());
